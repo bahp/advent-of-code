@@ -195,7 +195,7 @@ print(part2(lines))
 
 """
 # For some reason the sorting using functools was
-# not working, se the method using the class and
+# not working, so the method using the class and
 # the __gt__ and __lt__ was used. 
 
 game = []
