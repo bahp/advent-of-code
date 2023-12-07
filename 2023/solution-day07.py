@@ -191,8 +191,6 @@ print(part2(lines))
 
 
 
-
-
 """
 # For some reason the sorting using functools was
 # not working, so the method using the class and
