@@ -109,19 +109,15 @@ def joker_hand_strength(cards):
         print("==> missed!", cards, c)
 
 
-
-
 def compare(a, b):
-    """The elements is an array with [cards, bid, strength]"""
+    """Each param is an array with [cards, bid, strength]"""
     if a[-1] == b[-1]:
         for ai, bi in zip(a[0], b[0]):
             if CARDS.index(ai) == CARDS.index(bi):
                 continue
-            #print(a, b, ai, bi, CARDS.index(ai) > CARDS.index(bi))
             return CARDS.index(ai) > CARDS.index(bi)
         return 0
     else:
-        #print(a, b, a[-1] > b[-1])
         return a[-1] > b[-1]
 
 class Hand:
