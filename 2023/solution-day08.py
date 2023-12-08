@@ -103,7 +103,9 @@ def part2_v2(input):
 
     .. note: It is supposed not to work in most of the cases. However,
              the problem has been design like it. Ideally the chinese
-             theorem should be usd. (read more in reddit)
+             theorem should be used. (read more in reddit)
+
+             lib.math.chinese_remainder_incongruence
     """
     nav, net = parse(input)
     ret = 1
@@ -161,12 +163,35 @@ path = Path('data/day08')
 with open(path / 'sample01.txt', 'r') as f:
     lines  = f.read()
 
-dirs, ways = parse3(lines)
-print(dirs, ways)
-
-
 # Show
 print(part1(lines))
 #print(part2_v1(lines))
 print(part2_v2(lines))
 print(part2_leijurv(lines))
+
+# .. note: Interesting way of parsing the file with two lines
+#          of code, and create a dictionary within the dictionary
+#          with 'L' and 'R' so no need for indexing needed.
+#
+#          {
+#               'AAA': {'L': 'BBB', 'R': 'CCC},
+#               'BBB': {'L': 'CCC', 'R': 'AAA},
+#          }
+
+# Parse
+dirs, ways = parse3(lines)
+
+# .. note: Interesting python trick indexing using a boolean.
+#          It can be used to update the graph position based
+#          on the L/R instruction.
+#
+#          pos = graph[pos][dir=='R']
+l = ['a', 'b']
+print(l[False])
+print(l[True])
+
+# .. note: It would be possible to convert your sequence of
+#          'R' and 'L' to 0 and 1, and just use that index
+#          to access the elements
+
+side =  [c == 'R' for c in 'LRLLRLR'] # True == 1
