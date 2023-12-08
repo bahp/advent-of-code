@@ -25,6 +25,15 @@ def parse2(input):
     net = [re.findall('\w+', l) for l in lines[2:]]
     return nav, np.array(net)
 
+def parse3(input):
+    """Parse the input.
+
+    .. note: Just an interesting approach."""
+    directions, _, *str_ways = input.splitlines()
+    ways = {way[0:3]: {'L': way[7:10], 'R': way[12:15]}
+        for way in str_ways}
+    return directions, ways
+
 def solvesteps_for(start, nav, net):
     """Solve steps with for loop."""
     pos = start
@@ -91,6 +100,10 @@ def part2_v2(input):
              The LCM(4,6) is 12.
 
     .. note: LCM(4,6,8) = LCM(LCM(4,6), 8)
+
+    .. note: It is supposed not to work in most of the cases. However,
+             the problem has been design like it. Ideally the chinese
+             theorem should be usd. (read more in reddit)
     """
     nav, net = parse(input)
     ret = 1
@@ -145,8 +158,12 @@ def part2_leijurv(input):
 # Path
 path = Path('data/day08')
 
-with open(path / 'sample02.txt', 'r') as f:
+with open(path / 'sample01.txt', 'r') as f:
     lines  = f.read()
+
+dirs, ways = parse3(lines)
+print(dirs, ways)
+
 
 # Show
 print(part1(lines))
