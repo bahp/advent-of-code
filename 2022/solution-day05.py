@@ -18,7 +18,7 @@ def parse_stacks(input):
     """Parse the stacks.
 
     .. note: Assumes stacks only have one letter components and
-             exploits the fact that they are a fixe distance
+             exploits the fact that they are a fixed distance
              apart from each other.
     """
     board, moves = input.split("\n\n")
