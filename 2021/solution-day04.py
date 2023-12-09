@@ -12,10 +12,6 @@ def parse(input):
              since we can convert it later using the
              numpy function.
 
-    .. note: Since we are using numpy functions latter
-             on, we can use the numpy package to do the
-             conversions and other formatting.
-
              np.array(m, dtype=int)
     """
     # Parse
