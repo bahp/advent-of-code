@@ -123,37 +123,33 @@ def ray_tracing(x,y,poly):
 
     return inside
 
-
-
 @timeit
-def polygon_contains_points_mpl(pth, points):
-    """"""
+def n_points_in_polygon_mpl(pth, points):
+    """Polygon contains points."""
     import matplotlib as mpl
     polygon = mpl.path.Path(pth, closed=True)
     return np.sum(polygon.contains_points(points))
 
 @timeit
-def polygon_contains_points_shapely(pth, points):
-    """"""
+def n_points_in_polygon_shapely(pth, points):
+    """Polygon contains points."""
     from shapely.geometry import Point
     from shapely.geometry.polygon import Polygon
     polygon = Polygon(pth)
-    count = 0
-    for i, j in points:
-        if polygon.contains(Point(i, j)):
-            count += 1
-    return count
+    return np.sum(np.array([
+        polygon.contains(Point(i, j))
+            for i, j in points
+    ]))
 
 @timeit
-def polygon_contains_points_ray(pth, points):
+def n_points_in_polygon_ray(pth, points):
     """"""
     # Using ray
     pth = np.array(pth)
-    count = 0
-    for i,j in points:
-        if ray_tracing(i, j, pth):
-            count += 1
-    return count
+    return np.sum(np.array([
+        ray_tracing(i, j, pth)
+            for i,j in points
+    ]))
 
 
 def part1(input):
@@ -212,9 +208,10 @@ def part2(input):
     # Get points of interest
     points = find_points(r)
 
-    answer1 = polygon_contains_points_mpl(r, points)
-    #answer2 = polygon_contains_points_shapely(r, points)  # slow
-    #answer3 = polygon_contains_points_ray(r, points)      # very slow
+    # Count number of points in polygon
+    answer1 = n_points_in_polygon_mpl(r, points)
+    #answer2 = n_points_in_polygon_shapely(r, points)  # slow
+    #answer3 = n_points_in_polygon_ray(r, points)      # very slow
 
     # Return
     return answer1
