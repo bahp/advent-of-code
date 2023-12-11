@@ -43,10 +43,12 @@ def simulation(pth):
 def numpy2str(m):
     return '\n'.join([''.join(e) for e in m])
 
-def show(x, y):
+def show(x, y, neighbors=None):
     tmp = M.copy()
     tmp[x, y] = 'O'
     print("\nPoint: (%s, %s) | %s" % (x, y, M[x,y]))
+    if neighbors is not None:
+        print("Neighbors: %s" % str(neighbors))
     print(numpy2str(tmp))
 
 def parse(input):
@@ -70,7 +72,7 @@ def get_neighbors(node, letter=None):
     return neighbors
 
 
-def dfs(visited, graph, node, verbose=0):
+def dfs(visited, graph, node):
     """Depth first search (recursive)
 
     .. note: It traces and returns the path.
@@ -87,9 +89,8 @@ def dfs(visited, graph, node, verbose=0):
     if node not in visited:
         visited.add(node)
         neighbors = get_neighbors(node)
-        if verbose:
-            print(node, M[node], neighbors)
-            show(*node, M[node])
+        if VERBOSE:
+            show(*node, neighbors)
         for next in neighbors:
             way = dfs(visited, graph, next)
             if way:
