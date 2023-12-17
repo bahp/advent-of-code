@@ -1,10 +1,5 @@
-[ //]: BEGIN 2023
 <details>
-<summary>
-2023
-</summary>
-
- 2023 Results
+<summary> 2023 | 12 part1, 11 part2 </summary>
 
 | Day | Part 1 | Part 2 |
 | :---: | :---: | :---: |
@@ -21,14 +16,8 @@
 | [Day 11](https://adventofcode.com/2023/day/11) | ⭐ | ⭐ |
 | [Day 15](https://adventofcode.com/2023/day/15) | ⭐ |   |
 </details>
-[ //]: END 2023
-[ //]: BEGIN 2022
 <details>
-<summary>
-2022
-</summary>
-
- 2022 Results
+<summary> 2022 | 5 part1, 5 part2 </summary>
 
 | Day | Part 1 | Part 2 |
 | :---: | :---: | :---: |
@@ -38,14 +27,8 @@
 | [Day 4](https://adventofcode.com/2022/day/4) | ⭐ | ⭐ |
 | [Day 5](https://adventofcode.com/2022/day/5) | ⭐ | ⭐ |
 </details>
-[ //]: END 2022
-[ //]: BEGIN 2021
 <details>
-<summary>
-2021
-</summary>
-
- 2021 Results
+<summary> 2021 | 5 part1, 5 part2 </summary>
 
 | Day | Part 1 | Part 2 |
 | :---: | :---: | :---: |
@@ -55,4 +38,3 @@
 | [Day 4](https://adventofcode.com/2021/day/4) | ⭐ | ⭐ |
 | [Day 5](https://adventofcode.com/2021/day/5) | ⭐ | ⭐ |
 </details>
-[ //]: END 2021
