@@ -1,6 +1,6 @@
 
 <details>
-<summary> 2023 | Part 1: 12/25 | Part 2: 11/25 </summary>
+<summary> 2023 | 23* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -19,7 +19,7 @@
 </details>
 
 <details>
-<summary> 2022 | Part 1:  5/25 | Part 2:  5/25 </summary>
+<summary> 2022 | 10* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -31,7 +31,7 @@
 </details>
 
 <details>
-<summary> 2021 | Part 1:  5/25 | Part 2:  5/25 </summary>
+<summary> 2021 | 10* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -43,7 +43,7 @@
 </details>
 
 <details>
-<summary> 2020 | Part 1:  3/25 | Part 2:  3/25 </summary>
+<summary> 2020 |  6* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -53,38 +53,36 @@
 </details>
 
 <details>
-<summary> 2019 | Part 1:  0/25 | Part 2:  0/25 </summary>
+<summary> 2019 |  0* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
 </details>
 
 <details>
-<summary> 2018 | Part 1:  0/25 | Part 2:  0/25 </summary>
+<summary> 2018 |  0* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
 </details>
 
 <details>
-<summary> 2017 | Part 1:  0/25 | Part 2:  0/25 </summary>
+<summary> 2017 |  0* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
 </details>
 
 <details>
-<summary> 2016 | Part 1:  0/25 | Part 2:  0/25 </summary>
+<summary> 2016 |  0* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
 </details>
 
 <details>
-<summary> 2015 | Part 1:  0/25 | Part 2:  0/25 </summary>
+<summary> 2015 |  0* </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
 </details>
-
-<span style="color: red;">text</span>
