@@ -1,5 +1,5 @@
 <details>
-<summary> Lens Library  </summary>
+<summary> 2023 | 12 part1, 11 part2 </summary>
 <br>
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -16,7 +16,7 @@
 | [Day 11](https://adventofcode.com/2023/day/11) | Cosmic Expansion  | ⭐ | ⭐ |
 | [Day 15](https://adventofcode.com/2023/day/15) | Lens Library  | ⭐ |   |
 </details><details>
-<summary> Supply Stacks  </summary>
+<summary> 2022 | 5 part1, 5 part2 </summary>
 <br>
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -26,7 +26,7 @@
 | [Day 4](https://adventofcode.com/2022/day/4) | Camp Cleanup  | ⭐ | ⭐ |
 | [Day 5](https://adventofcode.com/2022/day/5) | Supply Stacks  | ⭐ | ⭐ |
 </details><details>
-<summary> Hydrothermal Venture  </summary>
+<summary> 2021 | 5 part1, 5 part2 </summary>
 <br>
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -36,7 +36,7 @@
 | [Day 4](https://adventofcode.com/2021/day/4) | Giant Squid  | ⭐ | ⭐ |
 | [Day 5](https://adventofcode.com/2021/day/5) | Hydrothermal Venture  | ⭐ | ⭐ |
 </details><details>
-<summary> Toboggan Trajectory  </summary>
+<summary> 2020 | 3 part1, 3 part2 </summary>
 <br>
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
