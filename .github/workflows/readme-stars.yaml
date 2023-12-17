@@ -1,0 +1,52 @@
+name: Update README ⭐
+on: push
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      #- uses: k2bd/advent-readme-stars@v1
+      #  with:
+      #    userId: 1234567
+      #    leaderboardId: 9876543
+      #    sessionCookie: ${{ secrets.AOC_SESSION }}
+      #- uses: stefanzweifel/git-auto-commit-action@v5 # use v5
+      #  with:
+      #    commit_message: Update README stars
+
+      - name: setup python
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.10'
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: execute py src/readme/main.py
+        env:
+          USERID: "3565819"
+          AOC_SESSION: ${{ secrets.AOC_SESSION }}
+        run: python src/readme/main.py
+
+      - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
+        with:
+          commit_message: Update README stars
+
+
+      #  - name: commit files
+      #      run: |
+      #        git config --local user.email "action@github.com"
+      #        git config --local user.name "GitHub Action"
+      #        git add -A
+      #        git commit -m "update data" -a
+
+      #  - name: push changes
+      #    uses: ad-m/github-push-action@v0.6.0
+      #    with:
+      #      github_token: ${{ secrets.GITHUB_TOKEN }}
+      #      branch: main
