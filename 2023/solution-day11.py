@@ -1,30 +1,8 @@
-import re
-import math
+# Libraries
 import numpy as np
-import sys
-import time
 
 from pathlib import Path
-from functools import wraps
-from collections import Counter
 from itertools import combinations
-
-# This is the adjacency list uset to compute the neighbors. It
-# It contains for the current location, the possible movements
-# towards North (N), East (E), South (S) and West (W) of the
-# map.
-# N = -1, S = 1, W = -1, E = 1
-ADJ = {
-    '.': [],  # No pipe
-    '|': [[-1, 0], [1, 0]],  # N-S
-    '-': [[0, 1], [0, -1]],  # E-W
-    'L': [[-1, 0], [0, 1]],  # N-E
-    'J': [[-1, 0], [0, -1]], # N-W
-    '7': [[1, 0], [0, -1]],  # S-W
-    'F': [[1, 0], [0, 1]],   # S-E
-    'S': [[1,0], [0,1], [-1,0], [0, -1]],  # N-S-W-E
-}
-
 
 def numpy2str(m):
     return '\n'.join([''.join(e) for e in m])
@@ -49,7 +27,7 @@ def expand_map(m):
     # Return
     return E
 
-def expand_coords(coords, m, coef=1e6):
+def expand_coords(coords, m, n_copies=1e6):
     """Expand just the coordinates of galaxies"""
     r, c = M.shape
     cols = np.argwhere(np.sum(m == '.', axis=0) == c).flatten()
@@ -57,8 +35,8 @@ def expand_coords(coords, m, coef=1e6):
 
     expanded = []
     for i, j in coords:
-        a = i + (coef-1)*(np.sum(i>=rows))
-        b = j + (coef-1)*(np.sum(j>=cols))
+        a = i + n_copies*(np.sum(i>=rows))
+        b = j + n_copies*(np.sum(j>=cols))
         expanded.append((a,b))
 
     return expanded
@@ -87,7 +65,7 @@ def part1_map():
 def part1():
     """Solution part 1"""
     galaxies = np.argwhere(M == '#').tolist()
-    galaxies = expand_coords(galaxies, M, coef=2)
+    galaxies = expand_coords(galaxies, M, n_copies=1)
     return int(np.sum([manhattan(c0, c1)
         for c0, c1 in combinations(galaxies, 2)
     ]))
@@ -96,7 +74,7 @@ def part1():
 def part2():
     """Solution part 2"""
     galaxies = np.argwhere(M == '#').tolist()
-    galaxies = expand_coords(galaxies, M, coef=1e6)
+    galaxies = expand_coords(galaxies, M, n_copies=1e6-1)
     return int(np.sum([manhattan(c0, c1)
         for c0, c1 in combinations(galaxies, 2)
     ]))
@@ -125,7 +103,7 @@ def part2_4hbQ(filename):
 #sys.setrecursionlimit(1000000)
 
 # Path
-path = Path('data/day11') / 'sample01.txt'
+path = Path('data/day11') / 'sample02.txt'
 
 with open(path) as f:
     lines  = f.read()
