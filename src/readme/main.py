@@ -2,6 +2,7 @@
 import os
 import requests
 
+from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass
 from typing import Generator
@@ -19,8 +20,10 @@ def most_recent_advent_year(time: datetime = None) -> int:
     return time.year
 
 
-with open('../../secrets.txt', 'r') as f:
-    secrets = f.readlines()
+secrets = []
+if Path('../../secrets.txt').exists():
+    with open('../../secrets.txt', 'r') as f:
+        secrets = f.readlines()
 
 # -------------------------------------------------------
 # Constants
