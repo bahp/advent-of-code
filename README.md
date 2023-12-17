@@ -86,3 +86,5 @@
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
 </details>
+
+<span style="color: red;">text</span>
