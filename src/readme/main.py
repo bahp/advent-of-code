@@ -20,7 +20,7 @@ def most_recent_advent_year(time: datetime = None) -> int:
     return time.year
 
 
-secrets = []
+secrets = ['']
 if Path('../../secrets.txt').exists():
     with open('../../secrets.txt', 'r') as f:
         secrets = f.readlines()
