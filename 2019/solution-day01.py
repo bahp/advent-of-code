@@ -16,7 +16,14 @@ def part1(input):
 
 def part2(input):
     """Solution part 2"""
-    return -1
+    cumu = 0
+    for mass in parse(input):
+        while True:
+            mass = math.floor(mass / 3) - 2
+            if mass < 0:
+                break
+            cumu += mass
+    return cumu
 
 # -------------------------------------
 # Main
@@ -29,3 +36,4 @@ with open(path) as f:
 
 # Show
 print("Part 1: %s" % part1(lines))
+print("Part 2: %s" % part2(lines))

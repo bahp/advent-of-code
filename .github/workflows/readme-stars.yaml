@@ -29,7 +29,7 @@ jobs:
 
       - name: execute py src/readme/main.py
         env:
-          USERID: "3565819"
+          USERID: 3565819
           AOC_SESSION: ${{ secrets.AOC_SESSION }}
           README_LOCATION: ./README.md
           TEST: ${{ secrets.TEST }}
@@ -42,21 +42,6 @@ jobs:
           git commit -am "Updated readme"
           git push
 
-
       #- uses: stefanzweifel/git-auto-commit-action@v5 # use v5
       #  with:
       #    commit_message: Update README stars
-
-
-      #  - name: commit files
-      #      run: |
-      #        git config --local user.email "action@github.com"
-      #        git config --local user.name "GitHub Action"
-      #        git add -A
-      #        git commit -m "update data" -a
-
-      #  - name: push changes
-      #    uses: ad-m/github-push-action@v0.6.0
-      #    with:
-      #      github_token: ${{ secrets.GITHUB_TOKEN }}
-      #      branch: main
