@@ -218,6 +218,8 @@ def create_readme(path, start, end):
         lines = readme_table(year=year)
         content += '\n'.join(lines)
 
+    print(content)
+
     # Save
     with open(path, "w") as f:
         f.write(content)
