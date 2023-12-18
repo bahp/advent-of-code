@@ -234,4 +234,5 @@ if __name__ == '__main__':
     #replace_in(README_LOCATION)
 
     # Create readme from scratch.
-    create_readme(README_LOCATION, 2015, 2023)
+    create_readme(README_LOCATION, start=2015,
+        end=most_recent_advent_year())
