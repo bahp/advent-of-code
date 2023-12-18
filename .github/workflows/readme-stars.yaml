@@ -31,6 +31,7 @@ jobs:
         env:
           USERID: "3565819"
           AOC_SESSION: ${{ secrets.AOC_SESSION }}
+          README_LOCATION: ./README.md
           TEST: ${{ secrets.TEST }}
         run: python src/readme/main.py
 
