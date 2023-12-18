@@ -53,10 +53,11 @@
 </details>
 
 <details>
-<summary> 2019 |  0⭐ </summary>
+<summary> 2019 |  1⭐ </summary>
  
 | Day | Title | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
+| [Day 1](https://adventofcode.com/2019/day/1) | The Tyranny of the Rocket Equation  | ⭐ |   |
 </details>
 
 <details>
