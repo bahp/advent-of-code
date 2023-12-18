@@ -34,9 +34,17 @@ jobs:
           TEST: ${{ secrets.TEST }}
         run: python src/readme/main.py
 
-      - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
-        with:
-          commit_message: Update README stars
+      - name: Commit edited readme file
+        run: |
+          git config --global user.name 'bahp'
+          git config --global user.email 'bahp@users.noreply.github.com'
+          git commit -am "Updated readme"
+          git push
+
+
+      #- uses: stefanzweifel/git-auto-commit-action@v5 # use v5
+      #  with:
+      #    commit_message: Update README stars
 
 
       #  - name: commit files
